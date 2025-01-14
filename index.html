@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shokhrukh Kholmatjonov - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        /* Base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* Header section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .hero-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            color: #34495e;
+        }
+
+        /* About section */
+        .about {
+            padding: 6rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .about-card {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .about-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .about-card h3 {
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+        }
+
+        /* Projects section */
+        .projects {
+            padding: 6rem 2rem;
+            background: #f8f9fa;
+        }
+
+        .projects-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .project-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 200px;
+            background-color: #e0e0e0;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .project-content {
+            padding: 1.5rem;
+        }
+
+        .project-content h3 {
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+        }
+
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: #fff;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .contact-links {
+            margin-top: 1rem;
+        }
+
+        .contact-links a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .contact-links a:hover {
+            color: #3498db;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Shokhrukh Kholmatjonov</h1>
+            <p>Computer Engineering Student at University of Pittsburgh</p>
+        </div>
+    </section>
+
+    <section class="about">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-grid">
+            <div class="about-card">
+                <h3>Education</h3>
+                <p>Currently pursuing a Bachelor of Science in Computer Engineering at University of Pittsburgh, School of Engineering with a GPA of 3.59. Graduate of Chartiers Valley High School with a 4.0 GPA.</p>
+            </div>
+            <div class="about-card">
+                <h3>Technical Skills</h3>
+                <p>Proficient in C/C++, MatLab, VHDL/Verilog. Experienced with circuit analysis/design, digital logic design, and embedded systems. Familiar with Python, HTML/CSS, and JavaScript.</p>
+            </div>
+            <div class="about-card">
+                <h3>Leadership</h3>
+                <p>Team Leader for Pitt FYE Conference Paper, leading research on biotechnology advancements. Nominated for Best in Category due to innovative research and strong leadership.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="projects">
+        <h2 class="section-title">Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-image" style="background-color: #3498db;"></div>
+                <div class="project-content">
+                    <h3>CPU Design (Verilog)</h3>
+                    <p>Developed a simple CPU in VHDL with a control unit, ALU, and registers. Validated functionality through simulation and FPGA deployment. Collaborated with team members to optimize code for accuracy and efficiency.</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-image" style="background-color: #2ecc71;"></div>
+                <div class="project-content">
+                    <h3>Budget Planner (Excel)</h3>
+                    <p>Designed a comprehensive Budget Planner using Excel to efficiently track income, expenses, and savings. Implemented dynamic formulas for accurate financial analysis and tracking.</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-image" style="background-color: #e74c3c;"></div>
+                <div class="project-content">
+                    <h3>Rock Paper Scissors Circuit</h3>
+                    <p>Designed and implemented a game on a breadboard using logic implemented by transistor level circuit components, demonstrating practical application of digital logic design.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="experience">
+        <h2 class="section-title">Work Experience</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-content">
+                    <h3>Elior North America</h3>
+                    <p>Server (November 2024 - Present)</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-content">
+                    <h3>Lowes</h3>
+                    <p>Fulfillment Associate (June 2024 - September 2024)</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-content">
+                    <h3>King Crust</h3>
+                    <p>Cashier/Waiting Staff (April 2022 - August 2023)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="activities">
+        <h2 class="section-title">Activities & Interests</h2>
+        <div class="about-grid">
+            <div class="about-card">
+                <h3>Extracurricular Activities</h3>
+                <p>Active member of Society of Astronautics and Rocketry (SOAR), Intramural Basketball League player, and former Varsity Tennis athlete. Skilled in editing and montage creation.</p>
+            </div>
+            <div class="about-card">
+                <h3>Additional Skills</h3>
+                <p>Strong leadership and team collaboration abilities, excellent written and verbal communication, time management, and analytical skills. Detail-oriented with proven customer service experience.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Let's connect!</p>
+        <div class="contact-links">
+            <a href="mailto:SHK249@pitt.edu">Email</a>
+            <a href="tel:724-419-5518">Phone</a>
+            <a href="https://www.linkedin.com/in/shokhrukh-kholmatjonov-50141b245" target="_blank">LinkedIn</a>
+        </div>
+    </footer>
+
+    <script>
+        // Intersection Observer for fade-in animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        // Observe all project cards
+        document.querySelectorAll('.project-card').forEach(card => {
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
